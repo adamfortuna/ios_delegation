@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ViewControllerTwo.h"
 
 @interface AFViewController : UIViewController
 
+@property (strong, nonatomic) IBOutlet UILabel *currentEmail;
 @end

@@ -1,23 +1,126 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2519" systemVersion="12A206j" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2843" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1856"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1929"/>
     </dependencies>
     <scenes>
-        <!--class Prefix:identifier View Controller-->
+        <!--View Controller-->
         <scene sceneID="5">
             <objects>
                 <viewController id="2" customClass="AFViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hi8-lg-vjB">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Go Next">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="z23-Ti-49h" kind="modal" modalTransitionStyle="partialCurl" id="Mwt-iM-8c1"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Efn-Ed-tYs">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="Hfe-FL-JcN"/>
+                                    <constraint firstAttribute="width" constant="242" id="Lwf-tU-pCA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hi8-lg-vjB" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="111" id="mMh-cH-i3s"/>
+                            <constraint firstItem="Efn-Ed-tYs" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" type="default" id="rA8-gY-GcF"/>
+                            <constraint firstItem="Efn-Ed-tYs" firstAttribute="top" secondItem="3" secondAttribute="top" constant="198" id="uL2-14-Szp"/>
+                            <constraint firstAttribute="bottom" secondItem="hi8-lg-vjB" secondAttribute="bottom" constant="228" id="ybi-uA-X6k"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="currentEmail" destination="Efn-Ed-tYs" id="7Zi-FL-4Fr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
+        <!--View Controller Two-->
+        <scene sceneID="Xh3-ZT-Kkb">
+            <objects>
+                <viewController id="z23-Ti-49h" customClass="ViewControllerTwo" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="j66-Ho-gKw" userLabel="screen2" customClass="View">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Second View" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o36-YG-tC9">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Es-NO-jpE">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Done">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="doneClicked" destination="z23-Ti-49h" eventType="touchUpInside" id="4bI-W2-Oek"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3HK-kk-99M">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="188" id="ZJF-Do-xiI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="0.64705884459999996" green="0.76078432799999995" blue="0.38039216399999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="o36-YG-tC9" firstAttribute="top" secondItem="j66-Ho-gKw" secondAttribute="top" constant="44" id="9YO-RS-kbq"/>
+                            <constraint firstItem="3HK-kk-99M" firstAttribute="top" secondItem="j66-Ho-gKw" secondAttribute="top" constant="93" id="Vy9-xr-zyk"/>
+                            <constraint firstItem="3Es-NO-jpE" firstAttribute="top" secondItem="j66-Ho-gKw" secondAttribute="top" constant="188" id="XRq-Bc-YKY"/>
+                            <constraint firstItem="3HK-kk-99M" firstAttribute="centerX" secondItem="3Es-NO-jpE" secondAttribute="centerX" type="default" id="jy2-bb-Ufs"/>
+                            <constraint firstItem="3HK-kk-99M" firstAttribute="centerX" secondItem="j66-Ho-gKw" secondAttribute="centerX" type="default" id="mLY-Tj-08T"/>
+                            <constraint firstItem="o36-YG-tC9" firstAttribute="leading" secondItem="j66-Ho-gKw" secondAttribute="leading" constant="100" id="oR0-20-89X"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="emailField" destination="3HK-kk-99M" id="p8d-RE-RT5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SaZ-aZ-rYy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1921" y="32"/>
+        </scene>
     </scenes>
+    <classes>
+        <class className="AFViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AFViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="currentEmail" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="ViewControllerTwo" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewControllerTwo.h"/>
+            <relationships>
+                <relationship kind="action" name="doneClicked"/>
+                <relationship kind="outlet" name="emailField" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

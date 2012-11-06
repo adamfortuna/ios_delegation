@@ -23,6 +23,7 @@
 		66578E8316488045008DF977 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66578E5E16488045008DF977 /* Foundation.framework */; };
 		66578E8B16488045008DF977 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 66578E8916488045008DF977 /* InfoPlist.strings */; };
 		66578E8E16488045008DF977 /* MultipleScreensTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 66578E8D16488045008DF977 /* MultipleScreensTests.m */; };
+		66578E9916488418008DF977 /* ViewControllerTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = 66578E9816488418008DF977 /* ViewControllerTwo.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,8 @@
 		66578E8A16488045008DF977 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		66578E8C16488045008DF977 /* MultipleScreensTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MultipleScreensTests.h; sourceTree = "<group>"; };
 		66578E8D16488045008DF977 /* MultipleScreensTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MultipleScreensTests.m; sourceTree = "<group>"; };
+		66578E9716488418008DF977 /* ViewControllerTwo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewControllerTwo.h; sourceTree = "<group>"; };
+		66578E9816488418008DF977 /* ViewControllerTwo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerTwo.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +123,8 @@
 				66578E6B16488045008DF977 /* AFAppDelegate.h */,
 				66578E6C16488045008DF977 /* AFAppDelegate.m */,
 				66578E7416488045008DF977 /* MainStoryboard.storyboard */,
+				66578E9716488418008DF977 /* ViewControllerTwo.h */,
+				66578E9816488418008DF977 /* ViewControllerTwo.m */,
 				66578E7716488045008DF977 /* AFViewController.h */,
 				66578E7816488045008DF977 /* AFViewController.m */,
 				66578E6316488045008DF977 /* Supporting Files */,
@@ -274,6 +279,7 @@
 				66578E6916488045008DF977 /* main.m in Sources */,
 				66578E6D16488045008DF977 /* AFAppDelegate.m in Sources */,
 				66578E7916488045008DF977 /* AFViewController.m in Sources */,
+				66578E9916488418008DF977 /* ViewControllerTwo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
