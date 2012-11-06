@@ -26,4 +26,13 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    ViewControllerTwo *destination = segue.destinationViewController;
+    destination.delegate = self;
+}
+
+-(void)setEmailViewControllerDelegate:(ViewControllerTwo *)controller withEmail:(NSString *)string {
+    self.currentEmail.text = string;
+}
+
 @end

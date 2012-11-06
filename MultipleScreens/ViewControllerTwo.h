@@ -7,10 +7,22 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "AFViewController.h"
 
-@interface ViewControllerTwo : UIViewController
+@class ViewControllerTwo;
 
+@protocol SetEmailViewControllerDelegate <NSObject>
+-(void)setEmailViewControllerDelegate:(ViewControllerTwo *)controller withEmail:(NSString *)string;
+@end
+
+@interface ViewControllerTwo : UIViewController <UITextFieldDelegate>
+{
+    IBOutlet UITextField *emailField;
+    IBOutlet UIButton *doneClicked;
+}
+
+
+
+@property (weak, atomic) id <SetEmailViewControllerDelegate> delegate;
 @property (strong, nonatomic) IBOutlet UITextField *emailField;
 - (IBAction)doneClicked;
 

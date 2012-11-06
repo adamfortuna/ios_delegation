@@ -13,6 +13,7 @@
 @end
 
 @implementation ViewControllerTwo
+@synthesize emailField = _emailField;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -36,7 +37,9 @@
 }
 
 - (IBAction)doneClicked {
-    ((AFViewController *)self.presentingViewController).currentEmail.text = self.emailField.text;
+    //((AFViewController *)self.presentingViewController).currentEmail.text = self.emailField.text;
+    //[self dismissViewControllerAnimated:YES completion:nil];
+    [self.delegate setEmailViewControllerDelegate:self withEmail:self.emailField.text];
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 @end
